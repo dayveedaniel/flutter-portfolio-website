@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio_app/constants.dart';
 import 'package:portfolio_app/components/project_card.dart';
+import 'package:portfolio_app/constants.dart';
 
 class RecentProjects extends StatelessWidget {
   const RecentProjects({Key? key}) : super(key: key);

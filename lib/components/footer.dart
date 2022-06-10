@@ -14,7 +14,7 @@ class Footer extends StatelessWidget {
             const Text('Built with ❤ by'),
             TextButton(
               onPressed: () {},
-              child: const Text('Pradeep Tintali'),
+              child: const Text('David Daniel'),
             ),
           ],
         )

@@ -21,7 +21,7 @@ class HomePage extends StatelessWidget {
       key: _scaffoldKey,
       appBar: AppBar(
         title: const Text(
-          'JANE DOE',
+          'David Daniel',
           style: TextStyle(
             fontSize: 22,
             color: Color(0xFF4756DF),
@@ -51,11 +51,8 @@ class HomePage extends StatelessWidget {
                 ),
         ],
       ),
-      endDrawer: Utils.isMobile(context)
-          ? MyDrawer(
-              sc: myScrollController,
-            )
-          : null,
+      endDrawer:
+          Utils.isMobile(context) ? MyDrawer(sc: myScrollController) : null,
       floatingActionButton: FloatingActionButton(
         mini: Utils.isMobile(context) ? true : false,
         onPressed: () {

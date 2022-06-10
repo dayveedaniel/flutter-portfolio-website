@@ -23,17 +23,21 @@ class ProjectCard extends StatelessWidget {
           color: Colors.white,
         ),
         child: SizedBox(
-          // height: !Utils.isMobile(context)
-          //     ? Utils.mdqw(context) / 4
-          //     : Utils.mdqw(context) * 1.2,
+          height: !Utils.isMobile(context)
+              ? Utils.mdqw(context) / 4
+              : Utils.mdqw(context) * 1.2,
           width: !Utils.isMobile(context)
               ? Utils.mdqw(context) / 4
               : Utils.mdqw(context) * 0.9,
           child: Column(
             children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Image.network(project.imgURL),
+              SizedBox(
+                height: 100,
+                width: double.maxFinite,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Image.asset('images/${project.imgURL}.png'),
+                ),
               ),
               Text(
                 project.projectName,
@@ -43,12 +47,12 @@ class ProjectCard extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 10),
-              const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 10),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
                 child: Text(
-                  'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas ratione vel inventore labore commodi modi quos culpa aut saepe! Alias!',
+                  project.shortDescription!,
                   textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 16),
+                  style: const TextStyle(fontSize: 16),
                 ),
               ),
               Padding(

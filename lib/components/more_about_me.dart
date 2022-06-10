@@ -10,9 +10,8 @@ class MoreAboutMe extends StatelessWidget {
       padding:
           EdgeInsets.symmetric(horizontal: Utils.isMobile(context) ? 40 : 80),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: const [
-          Padding(
+        children: [
+          const Padding(
             padding: EdgeInsets.only(bottom: 15),
             child: Center(
               child: Text(
@@ -24,30 +23,54 @@ class MoreAboutMe extends StatelessWidget {
               ),
             ),
           ),
-          Text(
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis nesciunt excepturi quos obcaecati incidunt voluptatem ipsam sunt ipsum, autem deleniti cupiditate molestias quis unde quae totam porro dicta iure animi inventore, veniam hic! Omnis nulla, delectus a voluptatibus',
-            style: TextStyle(
-              fontSize: 16,
-            ),
-            textAlign: TextAlign.justify,
-          ),
-          Padding(
-            padding: EdgeInsets.symmetric(vertical: 15),
-            child: Text(
-              'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur nostrum dolor minus, libero delectus praesentium perferendis',
-              style: TextStyle(
-                fontSize: 16,
+          Row(
+            children: [
+              const Padding(
+                padding: EdgeInsets.only(right: 25),
+                child: CircleAvatar(
+                  maxRadius: 80,
+                  backgroundImage:
+                      AssetImage('assets/images/profile_photo.jpeg'),
+                ),
               ),
-              textAlign: TextAlign.justify,
-            ),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: const [
+                    Text(
+                      'Hey......Its Daniel, your fav flutter dev and aspiring AI and machine learning dev. '
+                      'I am a Middle+ flutter developer hoping to work at google some day with the flutter and dart team',
+                      style: TextStyle(
+                        fontSize: 16,
+                      ),
+                      textAlign: TextAlign.justify,
+                    ),
+                    Padding(
+                      padding: EdgeInsets.symmetric(vertical: 15),
+                      child: Text(
+                        '2nd year student of tpu, currently studying Software engineering, '
+                        'with specialization in mobile and desktop apps development ',
+                        style: TextStyle(
+                          fontSize: 16,
+                        ),
+                        textAlign: TextAlign.justify,
+                      ),
+                    ),
+                    Text(
+                      '2 years experience in building mobile apps with flutter, '
+                      '1 year experience in building native android apps using java. '
+                      'Participated in building and deploying over 5 mobile apps '
+                      'Extensive experience with git usage',
+                      style: TextStyle(
+                        fontSize: 16,
+                      ),
+                      textAlign: TextAlign.justify,
+                    )
+                  ],
+                ),
+              ),
+            ],
           ),
-          Text(
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, consequuntur labore? Ea totam voluptas amet!',
-            style: TextStyle(
-              fontSize: 16,
-            ),
-            textAlign: TextAlign.justify,
-          )
         ],
       ),
     );

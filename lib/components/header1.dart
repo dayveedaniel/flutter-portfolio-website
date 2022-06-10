@@ -40,27 +40,27 @@ class Header1 extends StatelessWidget {
                 child: SizedBox(
                   height: Utils.isMobile(context)
                       ? 200 / (Utils.mdqw(context) * 0.0025)
-                      : 180,
+                      : 300,
                   width: Utils.isMobile(context)
                       ? Utils.mdqw(context) * 0.85
-                      : 380,
+                      : 550,
                   child: DecoratedBox(
                     decoration: BoxDecoration(
                       boxShadow: const [
                         BoxShadow(
                           color: Colors.grey,
-                          blurRadius: 8,
-                          spreadRadius: 5,
+                          blurRadius: 10,
+                          spreadRadius: 3,
                         ),
                       ],
-                      borderRadius: BorderRadius.circular(6),
+                      borderRadius: BorderRadius.circular(15),
                       color: Colors.white,
                     ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: const [
                         Padding(
-                          padding: EdgeInsets.all(6.0),
+                          padding: EdgeInsets.all(15.0),
                           child: Text(
                             'About Me',
                             style: TextStyle(
@@ -72,7 +72,7 @@ class Header1 extends StatelessWidget {
                         Padding(
                           padding: EdgeInsets.all(8.0),
                           child: Text(
-                            'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia sed dolorem fugit sapiente porro veniam pariatur dolore nostrum delectus inventore tempore minus nemo, iste ullam illo laboriosam maiores repudiandae quos!',
+                            Utils.aboutMe,
                             style: TextStyle(
                               fontSize: 16,
                             ),
